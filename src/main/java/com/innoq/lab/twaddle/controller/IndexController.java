@@ -72,8 +72,8 @@ public class IndexController {
             String passwdt = byUserName.getPasswd();
             if(userForm.getPasswd().equals(passwdt)) {
 
-                return new ModelAndView(new RedirectView(fromMappingName("user-detail").build()));
-                
+                return new ModelAndView(new RedirectView(fromMappingName("user-detail").arg(0, byUserName.getId()).build()));
+
             } else{
                 redirectAttrs.addFlashAttribute("message", "Passwort ist falsch!");
                 return new ModelAndView(new RedirectView(fromMappingName("anmelden").build()));
