@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Chat User</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+<body>
+    <div id="menu">
+        <p class="welcome">Welcome</p>
+
+        <a href="/twaddle/user/" >Exit</a>
+    </div>
+
+    <th:block th:each="user : ${users}">
+        <li><a th:href="@{'/twaddle/user/' + ${user.id}}" th:text="${user.userName}"></a></li>
+    </th:block>
+
+    <form methode="post" action="/twaddle/user/message">
+        <label for="message">Nachricht</label>
+        <input type="text" name="message" id="message" size="63" />
+        <button type="submit">Schicken</button>
+    </form>
+
+
+
+</body>
+
+</html>
