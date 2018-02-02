@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Chat User</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+<body>
+    <div id="menu">
+        <p class="welcome">Welcome</p>
+
+        <form>
+            <input type="button" value="Exit" onclick="history.back()"></input>
+        </form>
+    </div>
+
+
+    <form methode="post" action="/twaddle/user/message">
+        <label for="message">Nachricht</label>
+        <input type="text" name="message" id="message" size="63" />
+        <button type="submit">Schicken</button>
+    </form>
+
+
+
+</body>
+
+</html>

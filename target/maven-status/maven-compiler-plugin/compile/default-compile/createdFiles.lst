@@ -1,0 +1,4 @@
+com/innoq/lab/twaddle/model/User.class
+com/innoq/lab/twaddle/TwaddleApplication.class
+com/innoq/lab/twaddle/repository/UserRepository.class
+com/innoq/lab/twaddle/controller/IndexController.class
